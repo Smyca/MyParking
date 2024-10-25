@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'mi-cuenta',
+    loadChildren: () => import('./mi-cuenta/mi-cuenta.module').then( m => m.MiCuentaPageModule)
+  },
+  {
+    path: 'mis-arriendos',
+    loadChildren: () => import('./mis-arriendos/mis-arriendos.module').then( m => m.MisArriendosPageModule)
+  },
+  {
+    path: 'mis-estacionamientos',
+    loadChildren: () => import('./mis-estacionamientos/mis-estacionamientos.module').then( m => m.MisEstacionamientosPageModule)
+  },
 ];
 
 @NgModule({
